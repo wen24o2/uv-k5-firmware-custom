@@ -15,6 +15,7 @@ ENABLE_TX1750                 	?= 1
 ENABLE_PWRON_PASSWORD         	?= 0
 ENABLE_DTMF_CALLING           	?= 0
 ENABLE_FLASHLIGHT             	?= 1
+ENABLE_SCRAMBLER                ?= 1
 
 # ---- CUSTOM MODS ----
 ENABLE_SPECTRUM               	?= 0
@@ -484,6 +485,9 @@ ifeq ($(ENABLE_FEAT_F4HWN_CA),1)
 endif
 ifeq ($(ENABLE_FEAT_F4HWN_DEBUG),1)
 	CFLAGS  += -DENABLE_FEAT_F4HWN_DEBUG
+endif
+ifeq ($(ENABLE_SCRAMBLER),1)
+	CFLAGS  += -DENABLE_SCRAMBLER
 endif
 
 LDFLAGS =

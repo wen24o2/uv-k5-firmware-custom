@@ -41,7 +41,7 @@ enum
     MENU_OFFSET,
     MENU_TOT,
     MENU_W_N,
-#ifndef ENABLE_FEAT_F4HWN
+#ifdef ENABLE_SCRAMBLER
     MENU_SCR,
 #endif
     MENU_BCL,
@@ -119,7 +119,7 @@ enum
     MENU_500TX,
 #endif
     MENU_350EN,
-#ifndef ENABLE_FEAT_F4HWN
+#ifdef ENABLE_SCRAMBLER
     MENU_SCREN,
 #endif
 #ifdef ENABLE_F_CAL_MENU
@@ -210,7 +210,7 @@ extern const char        gSubMenu_RX_TX[4][6];
 extern const char        gSubMenu_BAT_TXT[3][8];
 extern const char        gSubMenu_BATTYP[3][9];
 
-#ifndef ENABLE_FEAT_F4HWN
+#ifdef ENABLE_SCRAMBLER
     extern const char        gSubMenu_SCRAMBLER[11][7];
 #endif
 

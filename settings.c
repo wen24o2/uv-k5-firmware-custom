@@ -756,7 +756,7 @@ void SETTINGS_SaveSettings(void)
     State[4]  = gSetting_500TX;
 #endif
     State[5]  = gSetting_350EN;
-#ifdnef ENABLE_SCRAMBLER
+#ifndef ENABLE_SCRAMBLER
     State[6]  = false;
 #else
     State[6]  = gSetting_ScrambleEnable;
